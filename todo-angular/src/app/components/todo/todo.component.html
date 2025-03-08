@@ -1,0 +1,10 @@
+<div>
+    <input [(ngModel)]="task" />
+    <button (click)="addTask()">Добавить</button>
+    <ul>
+      <li *ngFor="let t of tasks; let i = index">
+        {{ t }} <button (click)="removeTask(i)">Удалить</button>
+      </li>
+    </ul>
+  </div>
+  
