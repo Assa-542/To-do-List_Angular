@@ -1,0 +1,13 @@
+<div>
+    <input [(ngModel)]="task" placeholder="Введите задачу" />
+    <button (click)="addTask()">Добавить</button>
+    <ul>
+      <app-todo-item
+        *ngFor="let t of tasks; let i = index"
+        [task]="t"
+        [index]="i"
+        (remove)="removeTask($event)">
+      </app-todo-item>
+    </ul>
+  </div>
+  
